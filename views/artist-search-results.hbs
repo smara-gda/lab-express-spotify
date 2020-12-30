@@ -2,9 +2,12 @@
    <p>You searched for {{ myQuery}}</p>
    {{#each artists}}
    <div>
-    <p>{{this.items.name}}</p>
-    {{!-- <p>{{this.images}}</p> --}}
-   </div>
+    <p>{{name}}</p>   
+    {{#each images}} 
+    {{!--  I am unsure how to only display 1 of the images for each artist --}}
+     <img src='{{url}}' alt="artist image">
    <button>Show more info</button>
+   </div>
+    {{/each}}
    {{/each}}
 </div>

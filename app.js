@@ -35,9 +35,11 @@ app.get('/artist-search', (req, res) => {
   spotifyAPI
     .searchArtists(myQuery)
     .then((results) => {
-      const artists = results.body.artists;
-      console.log('got an answer:', results.body.artists.items);
-      res.render('artist-search-results', { myQuery, artists });
+      const artists = results.body.artists.items;
+      // I am unsure how to only display 1 of the images for each artist
+      const images = results.body.artists.items.images;
+      console.log('got an answer:', results.body.artists.items[0].images[0]);
+      res.render('artist-search-results', { myQuery, artists, images });
     })
     .catch((error) => {
       console.log('I was unable to fetch the requested information', error);
