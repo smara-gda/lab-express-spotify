@@ -27,7 +27,22 @@ spotifyAPI
   );
 
 // Our routes go here:
-
+app.get('/', (req, res) => {
+  res.render('index');
+});
+app.get('/artist-search', (req, res) => {
+  const myQuery = req.query.q;
+  spotifyAPI
+    .searchArtists(myQuery)
+    .then((results) => {
+      const artists = results.body.artists;
+      console.log('got an answer:', results.body.artists.items);
+      res.render('artist-search-results', { myQuery, artists });
+    })
+    .catch((error) => {
+      console.log('I was unable to fetch the requested information', error);
+    });
+});
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
 );

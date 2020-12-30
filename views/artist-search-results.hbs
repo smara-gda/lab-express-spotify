@@ -1,0 +1,10 @@
+<div>
+   <p>You searched for {{ myQuery}}</p>
+   {{#each artists}}
+   <div>
+    <p>{{this.items.name}}</p>
+    {{!-- <p>{{this.images}}</p> --}}
+   </div>
+   <button>Show more info</button>
+   {{/each}}
+</div>
