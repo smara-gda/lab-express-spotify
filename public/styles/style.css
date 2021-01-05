@@ -24,3 +24,8 @@ form input {
 form button {
   flex: 0;
 }
+
+.img-style {
+  width: 168px;
+  height: 168px;
+}
