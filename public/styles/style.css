@@ -1,7 +1,26 @@
 body {
   margin: 0 auto;
-  max-width: 864px;
+  margin-top: 2em;
+  max-width: 40em;
   font-family: sans-serif;
   font-size: 20px;
   line-height: 1.5;
+}
+
+input,
+button {
+  font: inherit;
+  border: 0;
+}
+
+form {
+  display: flex;
+  width: 90%;
+}
+
+form input {
+  flex: 1;
+}
+form button {
+  flex: 0;
 }
