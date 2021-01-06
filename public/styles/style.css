@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0 auto;
   margin-top: 2em;
@@ -24,8 +27,39 @@ form input {
 form button {
   flex: 0;
 }
+.head-wrap {
+  margin-bottom: 12px;
+}
 
 .img-style {
-  width: 168px;
-  height: 168px;
+  max-width: 100%;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.result {
+  width: 30%;
+  padding: 1em;
+}
+
+.button-style {
+  font-size: 12px;
+  border-radius: 2px;
+  background-color: rgb(189, 78, 78);
+  color: white;
+}
+
+.name-style {
+  color: white;
+  margin-top: -9px;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.button-wrapper {
+  background-color: rgb(87, 87, 87);
+  text-align: center;
+  padding-bottom: 4px;
 }
