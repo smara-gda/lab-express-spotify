@@ -23,9 +23,20 @@ form {
 
 form input {
   flex: 1;
+  flex-grow: 3;
 }
-form button {
+
+.search-btn {
+  background-color: rgb(228, 114, 114);
   flex: 0;
+  flex-grow: 1;
+  color: white;
+}
+nav {
+  padding-bottom: 12px;
+}
+.href-style {
+  text-decoration: none;
 }
 .head-wrap {
   margin-bottom: 12px;
@@ -48,7 +59,7 @@ form button {
 .button-style {
   font-size: 12px;
   border-radius: 2px;
-  background-color: rgb(189, 78, 78);
+  background-color: rgb(228, 114, 114);
   color: white;
 }
 
@@ -59,7 +70,7 @@ form button {
   margin-bottom: 0;
 }
 .button-wrapper {
-  background-color: rgb(87, 87, 87);
+  background-color: rgb(102, 98, 98);
   text-align: center;
   padding-bottom: 4px;
 }

@@ -1,17 +1,15 @@
-<div class="head-wrap">
-  <p>You searched for {{myQuery}}</p>
-</div>
+
+
 <div class="results">
-   {{#each artists}}
+   {{#each albums}}
    <div class="result">
     <div class="">
      <img class="img-style"src='{{this.images.[1].url}}' alt="{{name}}">
     </div>
     <div class="button-wrapper">
      <p class="name-style">{{name}}</p>   
-     <button class="button-style"> <a href="/albums/{{id}}">View albums</a> </button>
+     <button class="button-style"> <a href="/tracks/{{id}}">View tracks</a> </button>
     </div>
    </div>
-  
    {{/each}}
 </div>
