@@ -51,11 +51,16 @@ app.get('/artist-search', (req, res) => {
 app.get('/albums/:id', (req, res) => {
   const id = req.params.id;
   // console.log('Got album id', id);
-  spotifyAPI.getArtistAlbums(id).then((album) => {
-    const albums = album.body.items;
-    console.log(albums);
-    res.render('albums', { albums });
-  });
+  spotifyAPI
+    .getArtistAlbums(id)
+    .then((album) => {
+      const albums = album.body.items;
+      console.log(albums);
+      res.render('albums', { albums });
+    })
+    .catch((error) => {
+      console.log('Could not find that album', error);
+    });
 });
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
